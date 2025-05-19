@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #0ef;
+}
+
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  color:whitesmoke;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  border-radius: 15px;
+  box-shadow: inset0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.cell:hover {
+  background: #0ef;
+  transform: scale(1.05);
+  box-shadow: 0 0 1px cyan,
+      0 0 5px cyan, 0 0 10px cyan,
+      0 0 25px cyan, 0 0 50px cyan
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0ef;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #0ef;
+  transform: scale(1.05);
+  box-shadow: 0 0 1px cyan,
+      0 0 25px cyan, 0 0 50px cyan,
+      0 0 100px cyan, 0 0 200px cyan
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 70px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+}
